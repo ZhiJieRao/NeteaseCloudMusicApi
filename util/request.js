@@ -52,7 +52,7 @@ const createRequest = (method, url, data = {}, options) => {
     let ip = options.realIP || options.ip || ''
     // console.log(ip)
     if (ip) {
-      headers['X-Real-IP'] = ip
+      // headers['X-Real-IP'] = ip
       headers['X-Forwarded-For'] = ip
     }
     // headers['X-Real-IP'] = '118.88.88.88'
@@ -60,7 +60,7 @@ const createRequest = (method, url, data = {}, options) => {
       if (!options.cookie.MUSIC_U) {
         // 游客
         if (!options.cookie.MUSIC_A) {
-          options.cookie.MUSIC_A = config.anonymous_token
+          // options.cookie.MUSIC_A = config.anonymous_token
         }
       }
       headers['Cookie'] = Object.keys(options.cookie)
